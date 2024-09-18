@@ -60,14 +60,14 @@ const passwordref=useRef(null)
     
     <div className='flex w-full h-[600px] bg-slate-400 justify-center flex-col items-center'>
     <h1 className='text-2xl font-bold mb-4'>Password Generator</h1>
-      <div className= ' tablet: w-[400px] h-[490px] laptop:w-[400px] bg-pink-600 rounded-md flex flex-col mobile:w-[340px]'>
+      <div className= ' tablet: w-[400px] h-[490px] laptop:w-[400px] bg-pink-600 rounded-md flex flex-col mobile:w-[330px]'>
         <div className='mt-8 ml-8'>
-          <input className='p-2 w-60 rounded-md pl-2' type="text" ref={passwordref} readOnly value={final}/>
-          <button onClick={copy} className='bg-blue-500 p-2 rounded-sm ml-2'>Copy</button>
+          <input className='p-2 w-[220px] rounded-md pl-2' type="text" ref={passwordref} readOnly value={final}/>
+          <button onClick={copy} className='bg-blue-500 p-2 rounded-sm ml-1 mr-1 mobile:w-[50px]'>Copy</button>
         </div>
         <div className='mt-5 flex items-center justify-evenly'>
           <label className='font-semibold' htmlFor="">Length of Password:</label>
-          <input onChange={(e)=>{setlength(e.target.value)}} className='w-16 p-2 rounded-md' type="number" max={20} min={7}/>
+          <input onChange={(e)=>{setlength(e.target.value)}} className='w-16 p-2 rounded-md' type="number" max={16} min={7}/>
         </div>
         <div className='mt-5 flex items-center justify-evenly'>
           <label className='font-semibold' htmlFor="">Password in Capital Case:</label>
